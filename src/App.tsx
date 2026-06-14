@@ -30,13 +30,12 @@ function App() {
                     />
                 )}
                 <ProposalList
-                    proposals={proposals}
-                    walletAddress={walletAddress}
-                    vote={vote}
-                    endProposal={endProposal}
-                    isAdmin={isAdmin}
-                    isLoading={isLoading}
-                />
+    proposals={proposals}
+    vote={vote}
+    endProposal={endProposal}
+    isAdmin={isAdmin}
+    isLoading={isLoading}
+/>
                 <TransactionHistory transactions={transactions} />
             </main>
         </div>
