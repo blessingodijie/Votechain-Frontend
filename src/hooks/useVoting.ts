@@ -3,7 +3,6 @@ import { ethers } from "ethers";
 import { CONTRACT_ADDRESS, CONTRACT_ABI } from "../constants/contract";
 
 export const useVoting = () => {
-    const [provider, setProvider] = useState<any>(null);
     const [walletAddress, setWalletAddress] = useState("");
     const [contract, setContract] = useState<any>(null);
     const [proposals, setProposals] = useState<any[]>([]);
@@ -47,7 +46,6 @@ export const useVoting = () => {
                 CONTRACT_ABI,
                 signer
             );
-            setProvider(provider);
             setWalletAddress(address);
             setContract(contract);
             const adminAddress = await contract.admin();

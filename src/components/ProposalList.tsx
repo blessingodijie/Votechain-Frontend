@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 
 interface ProposalListProps {
     proposals: any[];
-    walletAddress: string;
     vote: (proposalId: number, optionIndex: number) => void;
     endProposal: (proposalId: number) => void;
     isAdmin: boolean;
@@ -30,7 +29,7 @@ const CountdownTimer = ({ endTime }: { endTime: number }) => {
 
 };
 
-const ProposalList = ({ proposals, walletAddress, vote, endProposal, isAdmin, isLoading }: ProposalListProps) => {
+const ProposalList = ({ proposals, vote, endProposal, isAdmin, isLoading }: ProposalListProps) => {
     const [selectedOptions, setSelectedOptions] = useState<{[key: number]: number}>({});
 
     const totalVotes = (proposal: any) =>
