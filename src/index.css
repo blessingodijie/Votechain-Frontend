@@ -1,0 +1,176 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #0a0e1a;
+    color: #f1f5f9;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+    background: #111827;
+    border-bottom: 1px solid rgba(99,179,237,0.15);
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #60a5fa;
+}
+
+header button {
+    background: #1a2235;
+    border: 1px solid #60a5fa;
+    color: #60a5fa;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: #f1f5f9;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+/* Admin Panel */
+input, textarea, select {
+    width: 100%;
+    background: #1a2235;
+    border: 1px solid rgba(99,179,237,0.15);
+    border-radius: 8px;
+    padding: 10px 14px;
+    color: #f1f5f9;
+    font-size: 14px;
+    margin-bottom: 8px;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: #3b82f6;
+}
+
+/* Proposal Cards */
+.proposal-card {
+    background: #111827;
+    border: 1px solid rgba(99,179,237,0.15);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.proposal-card:hover {
+    border-color: rgba(99,179,237,0.3);
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.2s;
+    margin: 4px;
+}
+
+button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #3b82f6, #7c3aed);
+    color: white;
+}
+
+.btn-primary:hover:not(:disabled) {
+    opacity: 0.85;
+}
+
+.btn-danger {
+    background: rgba(239,68,68,0.1);
+    border: 1px solid rgba(239,68,68,0.3);
+    color: #fca5a5;
+}
+
+.btn-option {
+    background: #1a2235;
+    border: 1px solid rgba(99,179,237,0.15);
+    color: #94a3b8;
+    width: 100%;
+    text-align: left;
+}
+
+.btn-option.selected {
+    background: rgba(59,130,246,0.15);
+    border-color: #3b82f6;
+    color: #60a5fa;
+}
+
+/* Timer */
+.timer {
+    font-size: 12px;
+    color: #64748b;
+    margin: 8px 0;
+}
+
+/* Winner */
+.winner {
+    background: rgba(245,158,11,0.1);
+    border: 1px solid rgba(245,158,11,0.3);
+    border-radius: 8px;
+    padding: 10px;
+    color: #fbbf24;
+    margin: 8px 0;
+}
+
+/* Transaction History */
+.tx-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(99,179,237,0.1);
+    font-size: 13px;
+}
+
+.tx-hash {
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.tx-hash:hover {
+    text-decoration: underline;
+}
+
+/* Admin badge */
+.admin-badge {
+    background: rgba(245,158,11,0.1);
+    border: 1px solid rgba(245,158,11,0.3);
+    color: #fbbf24;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
