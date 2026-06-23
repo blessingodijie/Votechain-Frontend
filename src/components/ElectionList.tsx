@@ -46,7 +46,6 @@ const CountdownTimer = ({ endTime }: { endTime: number }) => {
 
         const ElectionList = ({ elections, candidatesByElection, fetchCandidates, vote, endElection, isAdmin, isLoading }: ElectionListProps) => {
     const [expandedElectionId, setExpandedElectionId] = useState<number | null>(null);
-    const [selectedCandidates, setSelectedCandidates] = useState<{[position: string]: number}>({});
 
     if (elections.length === 0) {
         return <p>No elections yet.</p>;
