@@ -39,6 +39,11 @@ export const useVoting = () => {
                 return;
             }
             const provider = new ethers.BrowserProvider(window.ethereum);
+            const network = await provider.getNetwork();
+                if (network.chainId !== 11155111n) {
+                    alert("Please switch your wallet to the Sepolia network!");
+                    return;
+                }
             const signer = await provider.getSigner();
             const address = await signer.getAddress();
             const contract = new ethers.Contract(
